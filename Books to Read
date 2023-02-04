@@ -1,0 +1,6 @@
+CREATE TABLE BookstoRead (id INTEGER PRIMARY KEY, Title TEXT, Author TEXT);
+
+INSERT INTO BooksToRead VALUES (1,"Regret","Emilia Finn");
+INSERT INTO BooksToRead VALUES (2, "A Little Wilder", "Serna Bell");
+INSERT INTO BooksToRead VALUES (3, "The Perfect Marriage", "Jeneva Rose");
+SELECT * FROM BookstoRead;
