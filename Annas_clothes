@@ -1,0 +1,41 @@
+--Create a clothing store database
+
+CREATE TABLE annas_clothes(id INTEGER PRIMARY KEY, item TEXT,selection TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO annas_clothes VALUES (1, "black shirt", "womens", 15.99, 100);
+INSERT INTO annas_clothes VALUES (2, "blue shirt", "mens", 15.99, 98);
+INSERT INTO annas_clothes VALUES (3, "pink shirt", "girls", 8.99, 150);
+INSERT INTO annas_clothes VALUES (4, "navy shirt", "boys", 8.99, 125);
+INSERT INTO annas_clothes VALUES (5, "pink lace", "undergarments", 25.89, 10);
+INSERT INTO annas_clothes VALUES (6, "blue lace", "undergarments", 25.88, 15);
+INSERT INTO  annas_clothes VALUES (7, "black boxer briefs", "undergarments", 15.67,25);
+INSERT INTO annas_clothes VALUES (8, "gray boxer briefs", "undergarments", 15.67, 25);
+INSERT INTO annas_clothes VALUES (9, "pink briefs", "undergarments", 6.99,10);
+INSERT INTO annas_clothes VALUES (10, "blue briefs", "undergarments", 6.99, 15);
+INSERT INTO annas_clothes VALUES (11, "disney characters", "undergarments", 1.99, 25);
+INSERT INTO annas_clothes VALUES (12, "marvel characters","undergarments", 1.99, 25);
+INSERT INTO annas_clothes VALUES (13, "skinny jeans","womens", 60.00, 15);
+INSERT INTO annas_clothes VALUES (14, "bootcut", "mens", 26.45, 38);
+INSERT INTO annas_clothes VALUES (15, "leggings", "girls", 12.99, 43);
+INSERT INTO annas_clothes VALUES (16, "joggers", "boys", 13.99, 68);
+INSERT INTO  annas_clothes VALUES (17, "hairbows", "girls",7.99, 50); 
+INSERT INTO annas_clothes VALUES (18,"hats", "boys", 12.30, 49);
+
+--display database ordered by price
+
+SELECT * FROM annas_clothes ORDER BY price desc; 
+
+--what is the avg price of items in the girls section?
+SELECT AVG(price) "avg girls price"
+FROM annas_clothes
+where selection='girls'; 
+
+--what are the 5 hightest quantity items ? 
+SELECT item, price, quantity
+FROM annas_clothes
+order by quantity desc
+limit 5; 
+
+-- display database by selection
+SELECT * FROM annas_clothes ORDER BY selection;
+
